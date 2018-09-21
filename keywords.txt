@@ -1,0 +1,35 @@
+#######################################
+# Syntax Coloring Map For ByteIOStream
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+ByteIOStream	KEYWORD1
+ByteInputStream	KEYWORD1
+ByteOutputStream	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+read	KEYWORD2
+peek	KEYWORD2
+available	KEYWORD2
+write	KEYWORD2
+flush	KEYWORD2
+setReadSource	KEYWORD2
+resetReadSource	KEYWORD2
+read	KEYWORD2
+setWriteStream	KEYWORD2
+resetWriteDestination	KEYWORD2
+setWriteCallback	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
+# Constants (LITERAL1)
+#######################################
