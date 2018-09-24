@@ -30,7 +30,7 @@ int ByteInputStream::available()
 	{
 		return readStream->available();
 	}
-	return -1;
+	return 0;
 }
 int ByteInputStream::peek()
 {
