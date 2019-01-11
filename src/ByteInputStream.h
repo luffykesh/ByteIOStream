@@ -24,9 +24,14 @@ public:
 		readPos=0;
 		readStream=NULL;
 	}
+	bool hasReadBuffer();
+	bool hasReadStream();
+	const uint8_t * getReadBuffer();
+	Stream * getReadStream();
 	void setReadSource(const uint8_t *buf,size_t size,size_t offset=0);
 	void setReadSource(Stream& readStream);
 	void resetReadSource();
+	bool seek(int count);
 	int available();
 	int peek();
 	int read();

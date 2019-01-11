@@ -38,6 +38,14 @@ public:
 		this->writeStream=NULL;
 		this->callback=NULL;
 	}
+	bool hasWriteStream()
+	{
+		return writeStream!=NULL;
+	}
+	Stream * getWriteStream()
+	{
+		return writeStream;
+	}
 	size_t write (uint8_t);
 	size_t write(const uint8_t *buf, size_t size);
 	/*operator bool(){return true;}

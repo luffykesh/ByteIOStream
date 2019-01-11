@@ -1,6 +1,26 @@
 #include "ByteInputStream.h"
 #include <Arduino.h>
 
+bool ByteInputStream::hasReadBuffer()
+{
+	return readBuffer!=NULL;
+}
+bool ByteInputStream::hasReadStream()
+{
+	return readStream!=NULL;
+}
+const uint8_t * ByteInputStream::getReadBuffer()
+{
+	if(readBuffer)
+		return readBuffer;
+	return NULL;
+}
+Stream * ByteInputStream::getReadStream()
+{
+	if(readStream)
+		return readStream;
+	return NULL;
+}
 void ByteInputStream::setReadSource(const uint8_t *buf,size_t size,size_t offset)
 {
 	readBuffer = buf + offset;
@@ -19,6 +39,39 @@ void ByteInputStream::resetReadSource()
 	readStream=NULL;
 	readBuffer=NULL;
 	readPos=bufferSize=0;
+}
+bool ByteInputStream::seek(int count)
+{
+	if(count==0)
+		return true;
+	if(readBuffer)
+	{
+		if(count>=0)
+		{
+			if(available()<count)
+				readPos = bufferSize;
+			else
+				readPos+=count;
+		}
+		else
+		{
+			if(-count>readPos)
+				readPos=0;
+			else
+				readPos+=count;
+		}
+	}
+	else if(readStream)
+	{
+		if(count>=0)
+		{
+			while(count--) 
+				read();
+		}
+		else 
+			return false;
+	}
+	return true;
 }
 int ByteInputStream::available()
 {
