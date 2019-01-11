@@ -4,7 +4,7 @@ Get Stream like API with byte/char buffers in Arduino.
 
 Useful when working with Streams, and need to use static array for same task, like parsing large data from a source
 
-## Reading from Stream
+## Data source (Reading from stream)
 
 The library provides two methods to set data source to read from.
 
