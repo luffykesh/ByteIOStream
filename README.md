@@ -19,9 +19,10 @@ The library provides two methods to set data source to read from.
 
 4. ### bool seek(int count);
 	Move the read position ahead or back.
-	Positive count skips the bytes, and negative count makes `count` bytes available to read again.
-	**Backward movement is possible only if the source is a buffer.**
+	Positive count skips `count` number of bytes, and negative count makes `count` bytes available to read again.
+
 	Returns true on success else false.
+	**Backward movement is possible only if the source is a buffer.**
 		
     **Note: Only one input source is supported. Adding another, will discard the older source.**
 		
