@@ -16,14 +16,14 @@ ByteOutputStream	KEYWORD1
 
 read	KEYWORD2
 peek	KEYWORD2
-seek KEYWORK2
+seek	KEYWORK2
 available	KEYWORD2
 write	KEYWORD2
 flush	KEYWORD2
-hasReadBuffer KEYWORD2
-hasReadStream KEYWORD2
-getReadBuffer KEYWORD2
-getReadStream KEYWORD2
+hasReadBuffer	KEYWORD2
+hasReadStream	KEYWORD2
+getReadBuffer	KEYWORD2
+getReadStream	KEYWORD2
 setReadSource	KEYWORD2
 resetReadSource	KEYWORD2
 read	KEYWORD2
