@@ -1,6 +1,8 @@
 #ifndef _BYTE_IO_STREAM_
 #define _BYTE_IO_STREAM_
-#define _BYTE_IO_STREAM_VERSION 1
+#define BYTE_IO_STREAM_VERSION_MAJOR 1
+#define BYTE_IO_STREAM_VERSION_MINOR 0
+#define BYTE_IO_STREAM_VERSION_REVISION 1
 #include <Arduino.h>
 #include "Stream.h"
 #include <ByteInputStream.h>
