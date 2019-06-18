@@ -55,7 +55,11 @@ bool ByteInputStream::seek(int count)
 		}
 		else
 		{
+			//supress sign-compare warning because here count is negative and hence -count will be positive
+			#pragma GCC diagnostic push
+			#pragma GCC diagnostic ignored "-Wsign-compare"
 			if(-count>readPos)
+			#pragma GCC diagnostic pop
 				readPos=0;
 			else
 				readPos+=count;
